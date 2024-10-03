@@ -24,6 +24,16 @@ The experiment recruited 12 participants, comprising 6 males and 6 females, aged
 To achieve efficient, high-quality dataset construction, we designed a synchronized data collection system combining millimeter-wave radar and a Leap Motion controller. This system connects to a PC via USB interface to run the data collection application, as illustrated in the Figure below. The Leap Motion accurately tracks hand joint data, enabling automatic and precise truncation of collected data length. The tracked motion trajectory of the index fingertip is considered ground truth, facilitating subsequent data quality selection and alignment processing.
 
 <p align="center">  
-    <img src="img/fig7.png" alt=" " width="500" />  
+    <img src="../img/fig7.png" alt=" " width="500" />  
 </p>  
 <p align="center"></p>
+
+## Dataset Format
+
+Collected data is stored in .npy file format. The data naming format is: $\rm data\_{yyyymmdd\_hhmmss}.npy$, for example, $\rm'data\_20240508\_210234.npy'$. The data shape is $T*163$, where $T$ is the data frame length. Here, data[:,:128] represents micro-Doppler time features, data[:, 128:160] represents range-time features, and data[:, 160:162] contains x-z coordinate position information of the right index fingertip collected by Leap Motion. data[:, 163] is reserved. Data visualization is shown in the Figure below. This study only utilizes micro-Doppler time features, range-time features and right index fingertip coordinate position information are not used, reserving more candidate information for future research.
+
+<p align="center">  
+    <img src="../img/fig9.png" alt=" " width="600" />  
+</p>  
+<p align="center"></p>
+
