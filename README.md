@@ -1,4 +1,4 @@
-# RadarScribe 🎯
+# mmScribe 🎯
 
 <div align="center">
   <img src="res/radars2.png" alt="RadarScribe Logo" width="200"/>
@@ -12,7 +12,7 @@
 
 ## 🌟 Overview
 
-RadarScribe is an innovative gesture recognition system that enables contactless human-computer interaction through millimeter-wave radar technology. The system accurately captures user gestures and converts them into text input, providing a novel approach to human-computer interaction.
+**mmScribe** is an innovative gesture recognition system that enables contactless human-computer interaction through millimeter-wave radar technology. The system accurately captures user gestures and converts them into text input, providing a novel approach to human-computer interaction.
 
 ## ✨ Key Features
 
@@ -25,38 +25,9 @@ RadarScribe is an innovative gesture recognition system that enables contactless
 
 ## 🎬 Demos
 
-<div align="center">
-  <table>
-    <tr>
-      <th>Android Demo</th>
-      <th>Laptop Demo</th>
-      <th>Raspberry Pi Demo</th>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="res/Android.mp4">
-          <img src="docs/android_demo.gif" width="250" alt="Android Demo"/>
-          <br>
-          Watch Demo →
-        </a>
-      </td>
-      <td align="center">
-        <a href="res/laptop.mp4">
-          <img src="docs/laptop_demo.gif" width="250" alt="Laptop Demo"/>
-          <br>
-          Watch Demo →
-        </a>
-      </td>
-      <td align="center">
-        <a href="res/RPi4B.mp4">
-          <img src="docs/rpi_demo.gif" width="250" alt="Raspberry Pi Demo"/>
-          <br>
-          Watch Demo →
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
+| Android Demo | Laptop Demo | Raspberry Pi Demo |
+|:-----------:|:----------:|:----------------:|
+| <video src="res/Android.mp4" /> | <video src="res/laptop.mp4" /> | <video src="res/RPi4B.mp4" /> |
 
 ## 🚀 Quick Start
 
