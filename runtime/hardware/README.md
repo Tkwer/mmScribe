@@ -1,7 +1,7 @@
 # ⚠️ Hardware Documentation
 
 <div align="center">
-  <img src="../res/radars2.png" alt="mmScribe Logo" width="150"/>
+  <img src="../../res/radars2.png" alt="mmScribe Logo" width="150"/>
   
   **FOR ACADEMIC AND RESEARCH USE ONLY**
 </div>
