@@ -16,7 +16,7 @@
 
 ## ✨ Key Features
 
-- 🎯 High-precision gesture recognition
+- 🎯 Streaming Aerial Handwriting Recognition
 - 📱 Cross-platform compatibility (Android, Windows, Raspberry Pi)
 - ⚡ Real-time response with low latency
 - 🔒 Privacy-preserving interaction
@@ -29,13 +29,13 @@
   <tbody>
     <tr>
       <td align="center">
-        <a href="res/laptop.mp4">Android Demo</a>
+        <a href="runtime/Android">Android Demo</a>
       </td>
       <td align="center">
-        <a href="res/laptop.mp4">Laptop Demo</a>
+        <a href="runtime/Windows">Laptop Demo</a>
       </td>
       <td align="center">
-        <a href="res/RPi4B.mp4">Raspberry Pi Demo</a>
+        <a href="runtime/RaspberryPi/">Raspberry Pi Demo</a>
       </td>
     </tr>
     <tr>
@@ -65,11 +65,11 @@ mmScribe supports multiple platforms through our runtime system:
     </td>
     <td align="center">
       <b>Windows</b><br>
-      🚧 In Development
+      ✅|🚧 Source Code and Libs
     </td>
     <td align="center">
       <b>Raspberry Pi</b><br>
-      🚧 In Development
+      ✅|🚧 Source Code and Libs
     </td>
   </tr>
 </table>
@@ -140,12 +140,12 @@ pip install -r requirements.txt
 
 ### Basic Usage
 
-1. Connect your radar hardware
+1. Select Dataset
 2. Run the main program:
 ```bash
-python run_gesture_recognition.py
+python main.py
 ```
-3. Follow the on-screen instructions for gesture input
+3. Training ...
 
 ## 📚 Documentation
 
@@ -155,18 +155,6 @@ For detailed documentation, please visit our [Wiki](../../wiki).
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Setup
-
-```bash
-# Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-.\venv\Scripts\activate  # Windows
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-```
 
 ## 📝 License
 
@@ -176,7 +164,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Maintainer**: [Your Name]
 - **Email**: [your.email@example.com]
-- **Project Link**: [GitHub Repository](https://github.com/yourusername/mmScribe)
+- **Project Link**: [GitHub Repository](https://github.com/Tkwer/mmScribe)
 
 ## ⭐ Show Your Support
 
