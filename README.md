@@ -1,18 +1,18 @@
 # mmScribe 🎯
 
 <div align="center">
-  <img src="res/radars2.png" alt="RadarScribe Logo" width="200"/>
+  <img src="res/radars2.png" alt="mmScribe Logo" width="200"/>
   
-  **A Deep Learning-based Gesture Recognition System Using Millimeter-wave Radar**
+  **mmScribe: Streaming End-to-End Aerial Handwriting Text Translation via mmWave Radar**
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
-  [![GitHub Stars](https://img.shields.io/github/stars/yourusername/RadarScribe.svg)](https://github.com/yourusername/RadarScribe/stargazers)
+  [![GitHub Stars](https://img.shields.io/github/stars/yourusername/mmScribe.svg)](https://github.com/yourusername/mmScribe/stargazers)
 </div>
 
 ## 🌟 Overview
 
-**mmScribe** is an innovative gesture recognition system that enables contactless human-computer interaction through millimeter-wave radar technology. The system accurately captures user gestures and converts them into text input, providing a novel approach to human-computer interaction.
+**mmScribe** is an innovative Aerial Handwriting system that enables contactless human-computer interaction through millimeter-wave radar technology. The system accurately captures user gestures and converts them into text input, providing a novel approach to human-computer interaction.
 
 ## ✨ Key Features
 
@@ -52,6 +52,32 @@
   </tbody>
 </table>
 
+## 📊 Dataset
+
+We provide a comprehensive dataset for aerial handwriting recognition using millimeter-wave radar. The dataset includes:
+
+- 🧑‍🤝‍🧑 12 participants (6 males, 6 females)
+- 📝 15,488 total samples
+- 📊 Rich feature set including micro-Doppler and range-time data
+- 🎯 Ground truth data from Leap Motion controller
+
+### Dataset Structure
+```
+dataset/
+├── datas1/    # Reserved dataset
+├── datas2/    # Participant 001 (1212 samples)
+├── datas3/    # Participant 002 (1202 samples)
+...
+└── datas14/   # Participant 013 (1192 samples)
+```
+
+For detailed information about the dataset, including collection methodology, data format, and usage guidelines, please visit our [Dataset Documentation](dataset/README.md).
+
+<div align="center">
+  <img src="res/fig7.png" alt="Data Collection System" width="500"/>
+  <p><em>Data Collection System Setup</em></p>
+</div>
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -64,10 +90,10 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/RadarScribe.git
+git clone https://github.com/yourusername/mmScribe.git
 
 # Navigate to project directory
-cd RadarScribe
+cd mmScribe
 
 # Install dependencies
 pip install -r requirements.txt
@@ -111,7 +137,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Maintainer**: [Your Name]
 - **Email**: [your.email@example.com]
-- **Project Link**: [GitHub Repository](https://github.com/yourusername/RadarScribe)
+- **Project Link**: [GitHub Repository](https://github.com/yourusername/mmScribe)
 
 ## ⭐ Show Your Support
 
