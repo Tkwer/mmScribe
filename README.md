@@ -43,10 +43,10 @@
         <video src=https://github.com/user-attachments/assets/51eca5c1-d5c2-42d0-bb8f-b8f7014c127a.mp4>
       </td>
       <td>
-        <video src="res/laptop.mp4">
+        <video src=https://github.com/user-attachments/assets/a93381c7-83e3-4ff2-84f9-4386962ca6a2.mp4>
       </td>
       <td>
-        <video src="res/RPi4B.mp4">
+        <video src=https://github.com/user-attachments/assets/b8286baf-ab3b-4d94-b595-b2c17799054a.mp4>
       </td>
     </tr>
   </tbody>
