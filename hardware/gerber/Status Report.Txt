@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BGT60TR13_PCB.PrjPcb]
+   Generated File[PCB4-RoundHoles.TXT]
+   Generated File[PCB4-SlotHoles.TXT]
+   Generated File[PCB4.LDP]
+   Generated File[PCB4.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 14:17:30 On 2025/3/24

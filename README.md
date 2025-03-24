@@ -78,6 +78,46 @@ For detailed information about the dataset, including collection methodology, da
   <p><em>Data Collection System Setup</em></p>
 </div>
 
+## 📱 Runtime Support
+
+mmScribe supports multiple platforms through our runtime system:
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="res/android_icon.png" width="50"/><br>
+      <b>Android</b><br>
+      ✅ Released
+    </td>
+    <td align="center">
+      <img src="res/windows_icon.png" width="50"/><br>
+      <b>Windows</b><br>
+      🚧 In Development
+    </td>
+    <td align="center">
+      <img src="res/rpi_icon.png" width="50"/><br>
+      <b>Raspberry Pi</b><br>
+      🚧 In Development
+    </td>
+  </tr>
+</table>
+</div>
+
+### Hardware Requirements
+- **ESP32-BGT60TR13 Radar Module**
+  - 58-63GHz mmWave Radar
+  - USB/UART Interface
+  - 5V Power Supply
+
+### Quick Installation
+```bash
+# Android APK
+wget https://github.com/Tkwer/mmScribe/releases/latest/download/mmScribe.apk
+```
+
+For detailed installation instructions and platform-specific guides, see our [Runtime Documentation](runtime/README.md).
+
 ## 🚀 Quick Start
 
 ### Prerequisites

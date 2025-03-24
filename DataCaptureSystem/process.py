@@ -10,6 +10,7 @@ import leapcdll.leap as leap
 from leapcdll.leap import datatypes as ldt
 from common_words import common_words
 from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtCore import QMutex, QMutexLocker
 
 #存储数据从float64改成float32, 
 
@@ -44,41 +45,47 @@ class DequeFIFO:
                 # print(f"Returning last non-empty data or initial value: {self.last_non_empty}")
                 return self.last_non_empty  # 否则返回最后一次非空的数据或初始化值
 
+# 共用类一定要加锁，不然发生什么错都不知道
 class MatrixFIFO:
     def __init__(self, num_chirps=64, num_adcsamples=64, max_num_chirps=1024):
         self.num_chirps = num_chirps
         self.num_adcsamples = num_adcsamples
         self.max_num_chirps = max_num_chirps   
         self.current_matrix = np.empty((0, num_adcsamples), dtype=np.float32)  # 初始化为空矩阵
+        self.mutex = QMutex()  # 内置互斥锁
 
     def append_matrix(self, new_matrix):
-        if new_matrix.shape != (self.num_chirps, self.num_adcsamples):  # 检查新矩阵尺寸
-            raise ValueError("New matrix must be of shape (self.num_chirp, self.num_adcsample")
+        with QMutexLocker(self.mutex):  # 自动加锁
+            if new_matrix.shape != (self.num_chirps, self.num_adcsamples):  # 检查新矩阵尺寸
+                raise ValueError("New matrix must be of shape (self.num_chirp, self.num_adcsample")
 
-        # 沿第二维拼接新矩阵
-        self.current_matrix = np.concatenate((self.current_matrix, new_matrix), axis=0)
+            # 沿第二维拼接新矩阵
+            self.current_matrix = np.concatenate((self.current_matrix, new_matrix), axis=0)
 
-        # 如果当前矩阵行数超过最大行数，则移除最早的行
-        if self.current_matrix.shape[0] > self.max_num_chirps:
-            # print("满了")
-            # 计算超出的行数
-            excess_rows = self.current_matrix.shape[0] - self.max_num_chirps
-            # 移除最早的行
-            self.current_matrix = self.current_matrix[excess_rows:, :]
+            # 如果当前矩阵行数超过最大行数，则移除最早的行
+            if self.current_matrix.shape[0] > self.max_num_chirps:
+                print("满了")
+                # 计算超出的行数
+                excess_rows = self.current_matrix.shape[0] - self.max_num_chirps
+                # 移除最早的行
+                self.current_matrix = self.current_matrix[excess_rows:, :]
 
     def remove_rows(self, num_rows):
-        # 确保不会尝试移除超过当前矩阵行数的行
-        if num_rows > self.current_matrix.shape[0]:
-            raise ValueError("Attempting to remove more rows than currently exist.")
-        
-        # 移除指定数量的列
-        self.current_matrix = self.current_matrix[num_rows:, :]
+        with QMutexLocker(self.mutex):  # 自动加锁
+            # 确保不会尝试移除超过当前矩阵行数的行
+            if num_rows > self.current_matrix.shape[0]:
+                raise ValueError("Attempting to remove more rows than currently exist.")
+            
+            # 移除指定数量的列
+            self.current_matrix = self.current_matrix[num_rows:, :]
 
     def get_matrix(self):
-        return self.current_matrix
+        with QMutexLocker(self.mutex):  # 自动加锁
+            return self.current_matrix.copy()  # 返回副本以保证数据安全
     
     def get_matrix_rows(self, rows):
-        return self.current_matrix[:rows, :] 
+        with QMutexLocker(self.mutex):  # 自动加锁
+            return self.current_matrix[:rows, :].copy()
     
 class PinchingListener(leap.Listener):
 
