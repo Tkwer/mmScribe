@@ -1,56 +1,124 @@
-# RadarScribe
+# RadarScribe 🎯
 
 <div align="center">
   <img src="res/radars2.png" alt="RadarScribe Logo" width="200"/>
+  
+  **A Deep Learning-based Gesture Recognition System Using Millimeter-wave Radar**
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
+  [![GitHub Stars](https://img.shields.io/github/stars/yourusername/RadarScribe.svg)](https://github.com/yourusername/RadarScribe/stargazers)
 </div>
 
-## 项目简介
+## 🌟 Overview
 
-RadarScribe 是一个创新的手势识别系统，通过毫米波雷达实现非接触式手势交互。该系统能够准确捕捉用户的手势动作，并将其转换为文本输入，为人机交互提供了一种全新的方式。
+RadarScribe is an innovative gesture recognition system that enables contactless human-computer interaction through millimeter-wave radar technology. The system accurately captures user gestures and converts them into text input, providing a novel approach to human-computer interaction.
 
-## 功能特点
+## ✨ Key Features
 
-- 🎯 高精度手势识别
-- 📱 跨平台支持
-- ⚡ 实时响应
-- 🔒 隐私保护
-- 🛠️ 易于集成
+- 🎯 High-precision gesture recognition
+- 📱 Cross-platform compatibility (Android, Windows, Raspberry Pi)
+- ⚡ Real-time response with low latency
+- 🔒 Privacy-preserving interaction
+- 🛠️ Easy integration with existing systems
+- 📊 Comprehensive data analysis tools
 
-## 演示视频
+## 🎬 Demos
 
-| [Android 演示](../../tree/main/res/Android.mp4) | [笔记本演示](../../tree/main/res/laptop.mp4) | [树莓派演示](../../tree/main/res/RPi4B.mp4) |
-|:-------------------------------------------:|:----------------------------------------:|:----------------------------------------:|
-| <video src="res/Android.mp4" width="250"/> | <video src="res/laptop.mp4" width="250"/> | <video src="res/RPi4B.mp4" width="250"/> |
+<div align="center">
+  <table>
+    <tr>
+      <th>Android Demo</th>
+      <th>Laptop Demo</th>
+      <th>Raspberry Pi Demo</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="res/Android.mp4">
+          <img src="docs/android_demo.gif" width="250" alt="Android Demo"/>
+          <br>
+          Watch Demo →
+        </a>
+      </td>
+      <td align="center">
+        <a href="res/laptop.mp4">
+          <img src="docs/laptop_demo.gif" width="250" alt="Laptop Demo"/>
+          <br>
+          Watch Demo →
+        </a>
+      </td>
+      <td align="center">
+        <a href="res/RPi4B.mp4">
+          <img src="docs/rpi_demo.gif" width="250" alt="Raspberry Pi Demo"/>
+          <br>
+          Watch Demo →
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
 
-## 安装说明
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8 or higher
+- CUDA-compatible GPU (optional, for faster processing)
+- Compatible radar hardware
+
+### Installation
 
 ```bash
-# Clone 仓库
+# Clone the repository
 git clone https://github.com/yourusername/RadarScribe.git
 
-# 进入项目目录
+# Navigate to project directory
 cd RadarScribe
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## 使用方法
+### Basic Usage
 
-1. 确保硬件设备正确连接
-2. 运行主程序
-3. 按照界面提示进行手势操作
+1. Connect your radar hardware
+2. Run the main program:
+```bash
+python run_gesture_recognition.py
+```
+3. Follow the on-screen instructions for gesture input
 
-## 贡献指南
+## 📚 Documentation
 
-欢迎提交 Pull Request 或创建 Issue！
+For detailed documentation, please visit our [Wiki](../../wiki).
 
-## 许可证
+## 🤝 Contributing
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-## 联系方式
+### Development Setup
 
-- 项目维护者：[Your Name]
-- 邮箱：[your.email@example.com]
-- 项目链接：[GitHub Repository]
+```bash
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+.\venv\Scripts\activate  # Windows
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📮 Contact
+
+- **Maintainer**: [Your Name]
+- **Email**: [your.email@example.com]
+- **Project Link**: [GitHub Repository](https://github.com/yourusername/RadarScribe)
+
+## ⭐ Show Your Support
+
+If you find this project useful, please consider giving it a star on GitHub!
