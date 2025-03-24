@@ -25,9 +25,32 @@
 
 ## 🎬 Demos
 
-| Android Demo | Laptop Demo | Raspberry Pi Demo |
-|:-----------:|:----------:|:----------------:|
-| <video src="res/Android.mp4" /> | <video src="res/laptop.mp4" /> | <video src="res/RPi4B.mp4" /> |
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="res/Android.mp4">Android Demo</a>
+      </td>
+      <td align="center">
+        <a href="res/laptop.mp4">Laptop Demo</a>
+      </td>
+      <td align="center">
+        <a href="res/RPi4B.mp4">Raspberry Pi Demo</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <video src="res/Android.mp4">
+      </td>
+      <td>
+        <video src="res/laptop.mp4">
+      </td>
+      <td>
+        <video src="res/RPi4B.mp4">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 🚀 Quick Start
 
