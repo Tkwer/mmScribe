@@ -29,7 +29,11 @@
   <tbody>
     <tr>
       <td align="center">
-        <a href="res/Android.mp4">Android Demo</a>
+        <a href=
+
+https://github.com/user-attachments/assets/51eca5c1-d5c2-42d0-bb8f-b8f7014c127a
+
+>Android Demo</a>
       </td>
       <td align="center">
         <a href="res/laptop.mp4">Laptop Demo</a>
