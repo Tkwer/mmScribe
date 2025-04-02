@@ -94,14 +94,14 @@ The Raspberry Pi version will offer:
 - Lightweight implementation
 - Headless operation mode
 - Network streaming capability
-
+<!-- 
 ## 📊 Performance Metrics
 
 | Platform | Processing Latency | Memory Usage | Battery Impact |
 |:--------:|:-----------------:|:------------:|:--------------:|
 | Android  | ~50ms             | 150MB        | ~2%/hour      |
 | Windows  | ~30ms             | 200MB        | N/A           |
-| RPi      | ~80ms             | 120MB        | N/A           |
+| RPi      | ~80ms             | 120MB        | N/A           | -->
 
 ## 🔄 Updates & Maintenance
 
