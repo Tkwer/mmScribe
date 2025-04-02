@@ -118,6 +118,19 @@ The Raspberry Pi version will offer:
 2. Windows/RPi
    - Development versions - stability not guaranteed
 
+## 🧪 Quick Validation without Hardware
+
+If you don't have the specialized radar hardware yet but want to quickly validate the system:
+
+1. **Explore the `temp` folder**
+   - `ForNoHardware` - Contains simulation code to test the system without physical radar
+   - `ForDemoBGT60TR13Kit` - Implementation for Demo BGT60TR13Kit development board
+
+2. **Running the simulation**
+   - These modules provide a simplified test environment
+   - Allows testing core functionality with sample data
+   - Note: These are temporary implementations for validation purposes only
+
 ## 🆘 Support
 
 For technical support and bug reports:

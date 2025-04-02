@@ -90,36 +90,7 @@ radar_frame.fft1dNum = 32 #16
 radar_frame.chirpNumOneFrame = 64 #32
 frame_data_array = np.zeros(radar_frame.fft1dNum*radar_frame.chirpNumOneFrame).astype(ctypes.c_uint16)
 radar_frame.frameData = ctypes.cast(frame_data_array.ctypes.data, ctypes.POINTER(ctypes.c_uint16))
-def generate_radar_data(num_chirp, num_adc):
-    """
-    生成雷达信号的NumPy矩阵
-    参数：
-        num_chirp: chirp数量
-        num_adc: 每个chirp的采样点数
-    
-    返回：
-        numpy.ndarray矩阵，形状为(num_chirp, num_adc)
-    """
-    # 信号参数配置
-    f_main = 5.0        # 主信号频率
-    f_phase = 0.2       # 相位调制频率
-    phase_amp = 2.0     # 相位调制幅度
-    noise_amp = 0.1     # 噪声幅度
 
-    # 生成时间序列 (向量化操作)
-    t = np.arange(num_adc) / num_adc  # 归一化时间 [0, 1)
-    
-    # 生成相位调制 (使用广播机制)
-    chirp_indices = np.arange(num_chirp)[:, np.newaxis]  # 列向量
-    phase_mod = phase_amp * np.sin(2 * np.pi * f_phase * chirp_indices / num_chirp)
-    
-    # 计算复合信号 (使用广播)
-    signal = np.sin(2 * np.pi * (f_main * t + phase_mod))
-    
-    # 添加噪声 (向量化随机数生成)
-    noise = np.random.uniform(-noise_amp, noise_amp, size=(num_chirp, num_adc))
-    
-    return signal + noise
 
 
 # 共用类一定要加锁，不然发生什么错都不知道
