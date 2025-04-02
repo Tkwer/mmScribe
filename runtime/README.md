@@ -81,14 +81,14 @@ mmScribe runtime provides cross-platform support for the gesture recognition sys
    - Follow the calibration wizard
    - Start writing!
 
-## 🖥️ Windows Setup (Coming Soon)
+## 🖥️ Windows Setup
 
 The Windows runtime is currently under development. Key features will include:
 - Native USB driver support
 - Real-time visualization
 - Data export capabilities
 
-## 🍓 Raspberry Pi Setup (Coming Soon)
+## 🍓 Raspberry Pi Setup
 
 The Raspberry Pi version will offer:
 - Lightweight implementation
